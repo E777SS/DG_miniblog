@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interesting facts about Python</title>
+</head>
+<body>
+{% extends 'blog_app/base.html' %}
+
+{% block content %}
+    <h1>Новый пост</h1>
+    <form method="POST" class="post-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Сохранить</button>
+    </form>
+{% endblock %}
+</body>
+</html>
